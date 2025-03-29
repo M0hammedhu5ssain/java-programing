@@ -1,0 +1,113 @@
+//printing each statement of string in the separate line
+class Main {
+    public static void main(String[] args) {
+        String s="its me hussain";
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            System.out.println(c);
+        }
+    }
+}
+//printing each statement with the ASCII VALUES of string in the separate line
+class Main {
+    public static void main(String[] args) {
+        String s="its me hussain";
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            System.out.println(c+" "+(int)c);
+        }
+    }
+}
+//printing only the uppercase and count only uppercase and this also used to lowercase digits alphabets and count certain  values for example vowes if(c=='a'||c==e||)
+class Main {
+    public static void main(String[] args) {
+        String s="ITS me hussain";
+        int count=0;
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            
+            if(Character.isUpperCase(c)){
+                
+                count++;
+            if(Character.isLowerCase(c)){
+               count++;
+                }
+
+                System.out.print(a+" ");
+               
+            }
+        }
+         System.out.println(count);
+    }
+}
+//Create New String Contains only The Uppercase character
+class Main {
+    public static void main(String[] args) {
+        String sn="";
+        String s="Create New String Contains only The Uppercase character";
+        int count=0;
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            
+            if(Character.isUpperCase(c)){
+                
+            sn=sn+c;
+            }
+        }
+         System.out.println(sn);
+    }
+}
+//Create New String frist Contains digitand then letters 
+class Main {
+    public static void main(String[] args) {
+        String d="";
+        String n="";
+        String s="NO26 sound";
+        int count=0;
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            
+            if(Character.isDigit(c)){
+                
+            d=d+c;
+            }
+            else{
+                n=n+c;
+            }
+        }
+         System.out.println(d+n);
+    }
+}
+//Create New String upper to lower case
+class Main {
+    public static void main(String[] args) {
+        String u="";
+        String l="";
+        String s="NO sound";
+        
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            
+            if(Character.isUpperCase(c)){
+                u=u+Character.toLowerCase(c);
+                }
+                else{
+                    l=l+Character.toUpperCase(c);
+                }}
+         System.out.println(u+l);
+    }
+}
+//Create New String upper to lower case
+class Main {
+    public static void main(String[] args) {
+        String rev="";
+        
+        String s="nosound";
+        int count=0;
+        for(int i=s.length()-1;i>0;i--){
+            char c=s.charAt(i);
+            rev=rev+c;
+        }
+         System.out.print(rev);
+    }
+}
