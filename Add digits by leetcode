@@ -1,0 +1,29 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args){
+        
+        int num=38;
+        int sum1=0;
+        int sum2=0;
+        if(num==0){
+            System.out.println("0");
+        }
+        else{
+        while(num!=0){
+            int mod=num%10;
+            sum1+=mod;
+            num/=10;
+        }
+        System.out.println(sum1);
+        while(sum1!=0){
+            int mod=sum1%10;
+            sum2+=mod;
+            sum1/=10;
+        }
+        System.out.println(sum2);
+        }
+    }
+    
+}
