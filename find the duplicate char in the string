@@ -1,0 +1,18 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+find the array if duplicate return 1 or return -1
+
+class Main {
+    public static void main(String[] args) {
+        String s="leetcode";
+        for(int i=1;i<s.length();i++){
+            char c=s.charAt(i);
+            if(c[i-1]==c[i]){
+                System.out.println(1);
+            }
+            else{
+                System.out.println(-1);
+            }
+        }
+    }
+}
