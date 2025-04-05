@@ -1,0 +1,18 @@
+//remove the duplicate elemnts in the string
+
+class Main {
+    public static void main(String[] args) {
+        String s = "aaabbccdde";
+        String result = "";
+
+        result += s.charAt(0);  // Add the first character by default
+
+        for (int i = 1; i < s.length(); i++) {
+            if (s.charAt(i) != s.charAt(i - 1)) {
+                result += s.charAt(i);
+            }
+        }
+
+        System.out.println("After removing adjacent duplicates: " + result);
+    }
+}
