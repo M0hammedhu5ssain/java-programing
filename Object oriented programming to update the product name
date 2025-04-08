@@ -1,1 +1,63 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class product{
+    String name;
+    int price;
+    String category;
+    product(){
+        name="unamed product";
+        price=0;
+        category="General";
+    }
+    product(String name){
+        this.name=name;
+        this.price=0;
+        this.category="General";
+        
+    }
+    product(String name,int price){
+        this.name=name;
+        this.price=price;
+        this.category="General";
+        
+    }
+        product(String name,int price,String category){
+        this.name=name;
+        this.price=price;
+        this.category=category;
+        
+    }
+    void update(String name){
+        this.name=name;
+        
+    }
+    void display(){
+        System.out.println("Product Name: "+name +"| Price: "+ price +"| Category: "+ category);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+          Scanner scanner = new Scanner(System.in);
+        product p1=new product();
+        p1.display();
+          product p2=new product("Laptop");
+            product p3=new product("Mobile",1000);
+              product p4=new product("Tablet",15000,"Electronics");
+              
+         p1.display();
+               System.out.print("Enter new product name: ");
+        String name = scanner.nextLine();
+        p1.update(name);
 
+        
+         p1.display();
+          p2.display();
+           p3.display();
+            p3.display();
+        
+        
+        
+    
+    }
+}
