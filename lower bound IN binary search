@@ -1,0 +1,40 @@
+class Main {
+    public static void main(String[] args) {
+        // The input sorted array
+        int arr[] = {1, 2, 3, 5, 8, 8, 10, 10, 11};
+        
+        // The value we want to find the lower bound for
+        int x = 9;
+        
+        // Variable to store the index of the lower bound (initialized to -1 in case it's not found)
+        int ans = -1;  
+        
+        // Length of the array
+        int n = arr.length;
+        
+        // Set the initial search boundaries
+        int low = 0;  // Start at the first index of the array
+        int high = n - 1;  // Start at the last index of the array
+
+        // Binary search loop
+        while (low <= high) {
+            // Calculate the midpoint of the current range
+            int mid = (low + high) / 2;  
+
+            // If the value at arr[mid] is greater than or equal to x,
+            // it could be the lower bound, but we need to keep searching
+            // the left side to see if there's an earlier element that is also >= x.
+            if (arr[mid] >= x) {
+                ans = mid;  // Update the answer to the current index (lower bound)
+                high = mid - 1;  // Search the left half of the array for an earlier bound
+            } 
+            // If arr[mid] is less than x, move to the right half of the array
+            else {
+                low = mid + 1;  // Adjust the left boundary to search the right side
+            }
+        }
+
+        // Output the index of the lower bound (or -1 if not found)
+        System.out.print(ans);  
+    }
+}
